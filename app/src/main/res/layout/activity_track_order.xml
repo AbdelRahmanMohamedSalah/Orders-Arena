@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".buyer.activities.TrackOrderActivity">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/varela_round"
+            android:text="@string/your_order_status_from"
+            android:textSize="@dimen/small_size" />
+
+        <TextView
+            android:id="@+id/restName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/title_font"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/extra_large_size" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="90">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="30"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/description_font"
+                            android:text="@string/sent"
+                            android:textColor="@color/colorBlue" />
+
+
+                        <com.github.vipulasri.timelineview.TimelineView
+                            android:id="@+id/sentTimeLine"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:line="@color/colorPrimary"
+                            app:lineOrientation="horizontal"
+                            app:linePadding="5dp"
+                            app:lineSize="2dp"
+                            app:marker="@drawable/ic_empty_circle"
+                            app:markerSize="20dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="30"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/description_font"
+                            android:text="@string/seen"
+                            android:textColor="@color/colorBlue" />
+
+                        <com.github.vipulasri.timelineview.TimelineView
+                            android:id="@+id/seenTimeLine"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:line="@color/colorPrimary"
+                            app:lineOrientation="horizontal"
+                            app:linePadding="5dp"
+                            app:lineSize="2dp"
+                            app:marker="@drawable/ic_empty_circle"
+                            app:markerSize="20dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="30"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/description_font"
+                            android:text="@string/on_the_way"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorBlue" />
+
+
+                        <com.github.vipulasri.timelineview.TimelineView
+                            android:id="@+id/onTheWayTimeLine"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:line="@color/colorPrimary"
+                            app:lineOrientation="horizontal"
+                            app:linePadding="5dp"
+                            app:lineSize="2dp"
+                            app:marker="@drawable/ic_empty_circle"
+                            app:markerSize="20dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="8dp">
+
+                    <com.dinuscxj.progressbar.CircleProgressBar
+                        android:id="@+id/timer"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:line_count="60"
+                        app:line_width="8dp"
+                        app:progress_end_color="@color/colorBlue"
+                        app:progress_start_color="@color/colorAccent"
+                        app:progress_stroke_width="2dp"
+                        app:progress_text_color="@color/colorPrimaryDark"
+                        app:progress_text_format_pattern="" />
+
+                    <TextView
+                        android:id="@+id/timerText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/title_font"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/large_size" />
+
+                </FrameLayout>
+
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</ScrollView>

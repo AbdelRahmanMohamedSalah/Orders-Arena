@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".Pharmacy.Activities.PharmacyItem">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/dragsIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    fresco:actualImageScaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/dragsName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/description_font"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/dragsDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/description_font"
+                    android:textAlignment="center"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/dragsPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/title_font"
+                    android:textColor="@android:color/holo_orange_dark" />
+                <TextView
+                    android:id="@+id/dragType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="sans-serif"
+                    android:textColor="#72000000" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:id="@+id/decQuantityBtnPharm"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:srcCompat="@drawable/ic_remove_circle" />
+
+                    <TextView
+                        android:id="@+id/quantityTextPharm"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="100"
+                        android:fontFamily="@font/title_font"
+                        android:gravity="center"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/incQuantityBtnParm"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:srcCompat="@drawable/ic_add_circle" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/customOrderTextPharm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/text_custom_order"
+                    android:fontFamily="@font/description_font"
+                    android:hint="@string/add_note_to_your_order"
+                    android:lines="2"
+                    android:padding="8dp"
+                    android:textColor="#000"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <Button
+            android:id="@+id/addToCartBtnPharm"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/splash_btn_bg"
+            android:text="@string/add_to_cart"
+            android:textColor="@color/colorPrimaryDark" />
+    </LinearLayout>
+</ScrollView>

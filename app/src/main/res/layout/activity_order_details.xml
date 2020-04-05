@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".seller.activities.OrderDetailsActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/Base.ThemeOverlay.AppCompat.Dark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/title_font"
+            android:text="@string/order_details"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/large_size" />
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnContainer"
+        android:layout_below="@id/toolbar">
+
+        <include layout="@layout/order_details" />
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/btnContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <Button
+            android:id="@+id/refuseBtn"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_margin="4dp"
+            android:layout_weight="30"
+            android:background="@drawable/splash_btn_bg"
+            android:fontFamily="@font/varela_round"
+            android:text="@string/refuse"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="@dimen/extra_small_size" />
+
+        <Button
+            android:id="@+id/acceptBtn"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_margin="4dp"
+            android:layout_weight="70"
+            android:background="@drawable/splash_btn_bg"
+            android:fontFamily="@font/varela_round"
+            android:text="@string/accept_order"
+            android:textColor="@color/darkGreen"
+            android:textSize="@dimen/extra_small_size" />
+    </LinearLayout>
+
+
+</RelativeLayout>

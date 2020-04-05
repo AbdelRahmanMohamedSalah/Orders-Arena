@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">Orders Arena</string>
+    <string name="add_new_address">Add New Address</string>
+    <string name="address_name">Address Name *</string>
+    <string name="street_number">Street/Number *</string>
+    <string name="house_building">House/Building *</string>
+    <string name="apartment_office_name">Apartment/Office Name *</string>
+    <string name="delivery_instructions">Delivery Instructions</string>
+    <string name="phone">Phone *</string>
+    <string name="save">Save</string>
+    <string name="district">District</string>
+    <string name="saved_addresses">Saved Addresses</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="edit_address">Edit Address</string>
+    <string name="select_delivery_address">Select Delivery Address</string>
+    <string name="total">Total</string>
+    <string name="bill">Bill</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="orders">Orders</string>
+    <string name="profile">Profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="order_from_the_best_restaurants_get_your_food_delivered_faster">Order from the best restaurants, get your food delivered faster.</string>
+    <string name="no_orders_found">No Orders Found</string>
+    <string name="view_details">View Details</string>
+    <string name="logout">LogOut</string>
+    <string name="restaurant_name">Restaurant Name</string>
+    <string name="choose_your_logo">LOGO</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="description">Description</string>
+    <string name="submit">Submit</string>
+    <string name="new_orders">New Orders</string>
+    <string name="title_activity_seller_dashboard">SellerActivityDashboard</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="order_details">Order Details</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="accept_order">Accept Order</string>
+    <string name="refuse">Refuse</string>
+
+    <!-- facebook -->
+
+    <string name="facebook_app_id">174930716502604</string>
+    <string name="fb_login_protocol_scheme">fb174930716502604</string>
+    <string name="continue_with_facebook">Continue With Facebook</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="please_enter_the_verification_code">Please enter the verification code</string>
+    <string name="close">Close</string>
+    <string name="verify">Verify</string>
+    <string name="verify_phone">Verify Phone</string>
+    <string name="item_name">Item Name</string>
+    <string name="item_price">Item Price</string>
+    <string name="item_description">Item Description</string>
+    <string name="category_name">Category Name</string>
+    <string name="multi_sizes">Multi Sizes</string>
+    <string name="no_address">No Registered Address Yet</string>
+    <string name="checkout">Checkout</string>
+    <string name="cart">CART</string>
+    <string name="add_note_to_your_order">Add note to your order.....</string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="size">Size</string>
+    <string name="extras">Extras</string>
+    <string name="swipe_left_to_edit">Swipe Left to Edit</string>
+
+
+    <string name="default_notification_channel_id">my_channel_01</string>
+    <string name="title_activity_hyper_market">HyperMarketActivity</string>
+    <string name="your_order_status_from">Your Order Status From</string>
+    <string name="sent">Sent</string>
+    <string name="seen">Seen</string>
+    <string name="on_the_way">On The Way</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".buyer.activities.SplashActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg" />
+
+    <Button
+        android:id="@+id/retry_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:text="Retry"
+        android:textColor="@color/colorPrimary"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/logo_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/logo_bg"
+        android:visibility="invisible" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/logoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_txt"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/cart_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/cart_logo"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/logoText"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/text_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/text_bar"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/logoText"
+            app:layout_constraintEnd_toEndOf="@id/logoText" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/logoText"
+            app:layout_constraintTop_toBottomOf="@id/text_bar">
+            <ImageView
+                android:id="@+id/slogan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/slogan"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+
+        <ProgressBar
+            android:id="@+id/progress_loader"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginTop="22dp"
+            android:indeterminate="true"
+            android:theme="@style/AppTheme.WhiteAccent"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logoText" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_animation"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:lottie_fileName="loading_and_done.json"
+            app:lottie_autoPlay="true"
+            app:lottie_colorFilter="@color/splashAccentColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logoText" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/splashText"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="16dp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/animated_bar"-->
+    <!--android:layout_width="2dp"-->
+    <!--android:layout_height="18dp"-->
+    <!--android:src="@android:color/white"-->
+    <!--android:layout_marginEnd="4dp"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/animated_text"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="ENJOY YOUR DELIVERY"-->
+    <!--android:textColor="@android:color/white"/>-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/selectionLayout"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:orientation="vertical"-->
+    <!--android:padding="16dp"-->
+    <!--android:animateLayoutChanges="true">-->
+
+    <!--<Button-->
+    <!--android:id="@+id/buyerBtn"-->
+    <!--android:layout_width="250dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/splash_btn_bg"-->
+    <!--android:text="Buyer"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:layout_marginBottom="16dp"/>-->
+
+    <!--<Button-->
+    <!--android:id="@+id/sellerBtn"-->
+    <!--android:layout_width="250dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/splash_btn_bg"-->
+    <!--android:text="Seller"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:layout_marginBottom="16dp"/>-->
+
+    <!--</LinearLayout>-->
+
+</FrameLayout>

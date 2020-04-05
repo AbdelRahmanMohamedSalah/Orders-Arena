@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.amoharib.graduationproject">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name="com.nj.imagepicker.provider.ImageProvider"
+            android:authorities="${applicationId}.com.nj.imagepicker.fileprovider"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".buyer.activities.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".buyer.activities.UserLoginActivity" />
+        <activity android:name=".buyer.activities.RegisterActivity" />
+        <activity android:name=".buyer.activities.MenuActivity" />
+        <activity android:name=".buyer.activities.FoodItemActivity" />
+        <activity android:name=".buyer.activities.OrderActivity" />
+        <activity android:name=".buyer.activities.PaymentActivity" />
+        <activity android:name=".buyer.activities.AddressSelectionActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".buyer.activities.NewAddressActivity"
+            android:parentActivityName=".buyer.activities.AddressSelectionActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".buyer.activities.AddressSelectionActivity" />
+        </activity>
+        <activity
+            android:name=".buyer.activities.EditAddressActivity"
+            android:parentActivityName=".buyer.activities.AddressSelectionActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".buyer.activities.AddressSelectionActivity" />
+        </activity>
+        <activity android:name=".buyer.activities.TrackOrderActivity" />
+        <activity
+            android:name=".buyer.activities.MainActivity"
+            android:label="@string/title_activity_main" />
+        <activity android:name=".seller.activities.SellerRegisterActivity" />
+        <activity android:name=".seller.activities.SellerLoginActivity" />
+        <activity
+            android:name=".seller.activities.SellerDashboardActivity"
+            android:label="@string/title_activity_seller_dashboard"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".seller.activities.OrderDetailsActivity" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".seller.activities.AddEditMenuItemActivity" />
+
+        <service android:name=".services.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".services.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
+        <activity android:name=".buyer.activities.CategoryActivity" />
+        <activity
+            android:name=".hypermarket.activities.HyperMarketActivity"
+            android:label="@string/title_activity_hyper_market" />
+        <activity android:name=".hypermarket.activities.MenuHyperMarketActivity" />
+        <activity android:name=".hypermarket.activities.MarketItemActivity" />
+        <activity android:name=".hypermarket.activities.OrderMarketActivity" />
+        <activity android:name=".hypermarket.activities.AddressSelectionMarketActivity" />
+        <activity android:name=".hypermarket.activities.PaymentMarketActivity" />
+        <activity android:name=".hypermarket.activities.TrackOrderMarketActivity" />
+        <activity android:name=".Pharmacy.Activities.MainPharmacy" />
+        <activity android:name=".Pharmacy.Activities.MenuPharmacy" />
+        <activity android:name=".Pharmacy.Activities.PharmacyItem" />
+        <activity android:name=".Pharmacy.Activities.OrderPharmacy" />
+        <activity android:name=".Pharmacy.Activities.AddressSelectionPharmacy"></activity>
+    </application>
+
+</manifest>
